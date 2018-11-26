@@ -1,0 +1,41 @@
+#page{
+    width: 80%;
+     margin: auto;
+     font-size: 1vw;
+
+}
+
+h1 {
+    text-align: center;
+    top: -200px;
+
+}
+
+#photo{
+    background: url("James_Durvin.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative ;
+    left: 80%;
+    top :-220px;
+    width: 200px;
+    height: 200px;
+
+}
+
+#linkedin{
+    position: relative;
+    width: 150px;
+    height: 100px;
+}
+
+#github {
+    position: relative;
+    width: 150px;
+    height: 100px;}
+
+
+
+
+
+

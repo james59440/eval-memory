@@ -1,0 +1,70 @@
+body {
+
+    background-image: url("texture-verte-de-fond-de-tableau-noir-de-salle-de-classe-82707207.jpg");
+    background-size:50%;
+}
+
+#titre{
+    color: red;
+}
+
+
+#cadran{
+
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 150px;
+    left: 560px;
+}
+
+
+#centre{
+    background:red;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    left: 49%;
+    top: -120px;
+    position: relative;
+
+
+}
+
+#fleche1{
+
+    width:12px ;
+    height: 140px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 320px;
+    transform-origin: bottom;
+    animation-iteration-count: infinite;
+
+}
+
+#fleche2{
+    width: 12px ;
+    height: 160px;
+    background: green;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform-origin: bottom;
+    animation-iteration-count: infinite;
+
+}
+
+#fleche3{
+    width: 12px ;
+    height: 160px;
+    background: red;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform-origin: bottom;
+    animation-iteration-count: infinite;
+
+}
+
