@@ -14,17 +14,17 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 text-center">
-            <h1>Memory Game</h1>
+            <h1 id="grandTitre">Memory Game</h1>
         </div>
     </div>
 </div>
 
 
-<div class="container">
+<div id="page1" class="container">
     <div class="row">
 
         <div id="jeux" class="col-sm-6">
-            <img id="castor" src="image/Carte_face_Verso.png" alt="castor.jpg">
+            <img id="castor" src="image/Carte_face_Verso.png" alt="versocarte">
             <img id="elephant" src="image/Carte_face_Verso.png" alt="versocarte">
             <img id="girafe" src="image/Carte_face_Verso.png" alt="versocarte">
             <img id="lion" src="image/Carte_face_Verso.png" alt="versocarte">
@@ -38,7 +38,7 @@
             <img id="singe2" src="image/Carte_face_Verso.png" alt="versocarte">
             <img id="vache2" src="image/Carte_face_Verso.png" alt="versocarte">
 
-            <span> resultat :</span>
+            <span></span>
             <span id="objet"></span>
 
 
@@ -48,18 +48,32 @@
 
         </div>
 
-        <div id="regles" class="col-sm-5 text-center">
+        <div id="regles" class="col-sm-5 ">
 
-            <h1>Résultats :</h1>
-            <span id="vrai"> vrai :</span>
-            <span id="true"></span>
+            <h1 id="titre2" >Règles:</h1>
 
-            <span id="faux">faux :</span>
-            <span id="false"></span>
+            <p id="but">But du jeu : le but du jeu de memory est de collecter les paires correspondantes, un temps sera aussi impartis pour augmenter la difficulté. Vous avez 30 secondes !!! </p>
+
+            <span id="placecompt">compteur :</span>
+            <span id="compte"></span>
+
+
 
 
         </div>
 
+    </div>
+</div>
+
+<div id="page2" class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <h1 id="result">Résultats:</h1>
+            <span id="win"></span>
+            <span id="loose"></span>
+
+        </div>
     </div>
 </div>
 

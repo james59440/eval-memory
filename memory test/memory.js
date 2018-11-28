@@ -1,79 +1,144 @@
+//memory project:
+
+//Variable used for create a board with my animals picture:
 var faceCarte = [1,1,2,2,3,3,4,4,5,5,6,6];
 
-var CarteReturne = [0,0,0,0,0,0,0,0,0,0,0,0];
+//Variable used for create a board with my Verso Card picture:
+var CarteReturn = [0,0,0,0,0,0,0,0,0,0,0,0];
 
+//var for true pair of cards
 var bonnepaire = [];
 
+//var used for to define the number of pair cards:
 var NbrPaire = 0;
 
+//var used for search in the element id "jeux" , they elements "img"
 var ImageCarte = document.getElementById('jeux').getElementsByTagName("img");
 
+// var used to define the time in the counter :
+var s = 30;
+
+//var used to define the stop of the counter :
+var clear;
+
+//function counter:
+
+function decompte() {
+
+    clearTimeout(clear);
+
+
+    var secondes = document.getElementById("compte").innerHTML = s;
+    s--;
+    secondes.innerHTML = s;
+
+    clear = setTimeout(decompte, 1000);
+
+    if (s<0){
+        clearTimeout(clear);
+
+        //if the player don't finish in the time given a new page appear with the message "tu as perdu"
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "block";
+            document.getElementById("win").innerHTML = "tu as perdu "
+
+    }
+}
+
+setTimeout(decompte,1000);
+
+
+
+
+
+
+//boucle used to define an fonction onclick in the var ImageCarte and call the function parametre :
 for ( var i = 0; i < ImageCarte.length; i++) {
 
-    ImageCarte[i].CarteNo = i;
+    ImageCarte[i].NumCard = i;
     ImageCarte[i].onclick = function () {
-        ProgrammeJeux(this.CarteNo);
+        Parametre(this.NumCard);
     }
-};
+}
 
-InitialisationJeux();
+//return of the function Alea:
+Alea();
 
-function AffichageCarte(CarteNo) {
+//function to define the display of the cards(verso,face,hide):
+function AfficheCard(NumCard) {
 
-    switch ( CarteReturne[CarteNo]) {
+    switch ( CarteReturn[NumCard]) {
 
+        //the card verso is on stat 0
         case 0:
-            ImageCarte[CarteNo].src="Carte_face_Verso.png";
+            ImageCarte[NumCard].src="image/Carte_face_Verso.png";
             break;
+
+            //they animals picture is on stat 1
         case 1:
 
-            ImageCarte[CarteNo].src="yu gi oh"+faceCarte[CarteNo]+".png";
-            console.log('test');
+            ImageCarte[NumCard].src="image/animal" +faceCarte[NumCard]+".jpg";
+
             break;
+
+            //tha card complete passed hidden in stats -1 (if we have the same pair)
         case -1:
-            ImageCarte[CarteNo].style.visibility="hidden";
+            ImageCarte[NumCard].style.visibility="hidden";
             break;
 
 
     }
 }
 
-function InitialisationJeux () {
+//function to define the position random of the cards :
+function Alea () {
 
-    for ( var m = faceCarte.length - 1; m >= 1; m--) {
+    for ( var a = faceCarte.length - 1; a >= 1; a--) {
 
-        var random = Math.floor(Math.random()*( m + 1 ));
-        var SauvegardeCarte = faceCarte[m];
-        faceCarte[m] = faceCarte[random];
-        faceCarte[random] = SauvegardeCarte;
+        var random = Math.floor(Math.random()*( a + 1 ));
+        var positionCarte = faceCarte[a];
+        faceCarte[a] = faceCarte[random];
+        faceCarte[random] = positionCarte;
     }
 
 }
 
-function ProgrammeJeux(CarteNo) {
+//function to define what to do with the cards
+function Parametre(NumCard) {
 
+    //For return only two cards in once time
     if ( bonnepaire.length < 2) {
 
-        if (CarteReturne [CarteNo] == 0 ) {
-            CarteReturne [CarteNo] = 1;
-            bonnepaire.push(CarteNo);
-            AffichageCarte(CarteNo);
+        //if click in the card recto(0) the card passed in verso(1)
+        if (CarteReturn [NumCard] == 0 ) {
+            CarteReturn [NumCard] = 1;
+            bonnepaire.push(NumCard);
+            AfficheCard(NumCard);
         }
 
+        //if we have the same pair of cards we take off(-1) of they else they return in recto position(0)
         if(bonnepaire.length==2){
-            var nouveauEtat=0;
+            var newchange=0;
             if(faceCarte[bonnepaire[0]]==faceCarte[bonnepaire[1]]){
-                nouveauEtat=-1;
+                newchange=-1;
                 NbrPaire++;
             }
 
-            CarteReturne[bonnepaire[0]]=nouveauEtat;
-            CarteReturne[bonnepaire[1]]=nouveauEtat;
+            CarteReturn[bonnepaire[0]]=newchange;
+            CarteReturn[bonnepaire[1]]=newchange;
 
             setTimeout(function(){
-                AffichageCarte(bonnepaire[0]);
-                AffichageCarte(bonnepaire[1]);
+                AfficheCard(bonnepaire[0]);
+                AfficheCard(bonnepaire[1]);
                 bonnepaire =[];
+
+
+                //if all pair is find a new page appear with the message "tu as gagné"
+                if (NbrPaire==6){
+                    document.getElementById("page1").style.display = "none";
+                    document.getElementById("page2").style.display = "block";
+                    document.getElementById("win").innerHTML = "tu as gagné "
+                }
 
             },1000)
 

@@ -1,3 +1,7 @@
+body{
+    background-image: url("image/orig - Copie.jpg");
+}
+
 #jeux{
     background-color: black;
     color: white;
@@ -12,7 +16,7 @@
     margin-top: 5%;
 }
 
-#vrai{
+#compte{
     position: absolute;
     top: 200px;
     left: 50px;
@@ -112,4 +116,50 @@
     position: absolute;
     top: 200px;
     left: 300px;
+}
+
+#win{
+    font-size: 25px;
+    position: absolute;
+    top: 400px;
+    left: 42%;
+}
+
+#loose{
+    font-size: 25px; ;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+}
+
+#result{
+    padding-top: 10%;
+}
+
+#page2{
+    color: white;
+
+}
+
+#grandTitre{
+    color: red;
+
+}
+
+#titre2{
+    text-align: center;
+}
+
+#but{
+    padding-top: 10%;
+}
+
+#placecompt{
+    padding-top: 5%;
+
+}
+
+#compte{
+    top: 189px;
+    left: 95px;
 }
