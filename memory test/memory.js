@@ -16,7 +16,7 @@ var NbrPaire = 0;
 var ImageCarte = document.getElementById('jeux').getElementsByTagName("img");
 
 // var used to define the time in the counter :
-var s = 2;
+var s = 40;
 
 //var used to define the stop of the counter :
 var clear;
@@ -75,6 +75,7 @@ for ( var i = 0; i < ImageCarte.length; i++) {
 Alea();
 
 //function to define the display of the cards(verso,face,hide):
+
 function AfficheCard(NumCard) {
 
     switch ( CarteReturn[NumCard]) {
