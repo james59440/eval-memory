@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Memory Game</title>
     <link rel="stylesheet" href="memory.css">
     <link rel="stylesheet" href="bootstrap - Copie.css">
 
@@ -52,9 +53,9 @@
 
             <h1 id="titre2" >Règles:</h1>
 
-            <p id="but">But du jeu : le but du jeu de memory est de collecter les paires correspondantes, un temps sera aussi impartis pour augmenter la difficulté. Vous avez 30 secondes !!! </p>
+            <p id="but">But du jeu : le but du jeu de memory est de collecter les paires correspondantes, un temps sera aussi impartis pour augmenter la difficulté. Vous avez 40 secondes !!! </p>
 
-            <span id="placecompt">compteur :</span>
+            <p id="placecompt">compteur :</p>
             <span id="compte"></span>
 
 
@@ -69,9 +70,11 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <h1 id="result">Résultats:</h1>
+            <h1 id="result"></h1>
             <span id="win"></span>
             <span id="loose"></span>
+            <button type="button" id="rejouer" onclick="restart()">rejouer</button>
+
 
         </div>
     </div>

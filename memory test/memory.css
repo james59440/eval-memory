@@ -1,5 +1,8 @@
 body{
+
     background-image: url("image/orig - Copie.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #jeux{
@@ -29,93 +32,95 @@ body{
 }
 
 #castor{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 50px;
+    top: 8%;
 }
 
 #girafe{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 50px;
-    left: 150px;
+    top: 8%;
+    left: 27%;
 }
 
 #elephant{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 50px;
-    left: 300px;
+    top: 8%;
+    left: 52%;
 }
 
 #lion{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 50px;
-    left: 450px;
+    top: 8%;
+    left: 77%;
 }
 
 #singe {
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 200px;
+    top: 36%;
 }
 
-#vache {width: 100px;
-    height: 100px;
+#vache {
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 200px;
-    left: 150px;
+    top: 36%;
+    left: 27%;
 }
 #castor2{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 350px;
+    top: 62%;
 }
 
 #girafe2{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 350px;
-    left: 150px;
+    top: 62%;
+    left: 27%;
 }
 
 #elephant2{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 350px;
-    left: 300px;
+    top: 62%;
+    left: 52%;
 }
 
 #lion2{
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 350px;
-    left: 450px;
+    top: 62%;
+    left: 77%;
 }
 
 #singe2 {
-    width: 100px;
-    height: 100px;
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 200px;
-    left: 450px;
+    top: 36%;
+    left: 77%;
 }
 
-#vache2 {width: 100px;
-    height: 100px;
+#vache2 {
+    width: 18%;
+    height: 18%;
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 36%;
+    left: 52%;
 }
 
 #win{
@@ -128,7 +133,7 @@ body{
 #loose{
     font-size: 25px; ;
     position: absolute;
-    top: 400px;
+    top: 200px;
     left: 50%;
 }
 
@@ -137,6 +142,7 @@ body{
 }
 
 #page2{
+
     color: white;
 
 }
@@ -151,15 +157,26 @@ body{
 }
 
 #but{
-    padding-top: 10%;
+    position: absolute;
+    top: 15%;
 }
 
 #placecompt{
-    padding-top: 5%;
+    position: absolute;
+    top: 50%;
 
 }
 
 #compte{
-    top: 189px;
-    left: 95px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#rejouer{
+    display: none;
+    position: absolute;
+    top: 450px;
+    left: 45%;
+
 }

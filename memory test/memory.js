@@ -16,10 +16,18 @@ var NbrPaire = 0;
 var ImageCarte = document.getElementById('jeux').getElementsByTagName("img");
 
 // var used to define the time in the counter :
-var s = 30;
+var s = 2;
 
 //var used to define the stop of the counter :
 var clear;
+
+
+function restart() {
+    location.reload();
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+
+}
 
 //function counter:
 
@@ -40,7 +48,9 @@ function decompte() {
         //if the player don't finish in the time given a new page appear with the message "tu as perdu"
             document.getElementById("page1").style.display = "none";
             document.getElementById("page2").style.display = "block";
-            document.getElementById("win").innerHTML = "tu as perdu "
+            document.getElementById("win").innerHTML = "tu as perdu ";
+            document.getElementById("result").innerHTML = "resultat :";
+            document.getElementById("rejouer").style.display = "inline-block"
 
     }
 }
@@ -93,6 +103,7 @@ function AfficheCard(NumCard) {
 //function to define the position random of the cards :
 function Alea () {
 
+    //boucle to definie the random pos of the card :
     for ( var a = faceCarte.length - 1; a >= 1; a--) {
 
         var random = Math.floor(Math.random()*( a + 1 ));
@@ -137,7 +148,9 @@ function Parametre(NumCard) {
                 if (NbrPaire==6){
                     document.getElementById("page1").style.display = "none";
                     document.getElementById("page2").style.display = "block";
-                    document.getElementById("win").innerHTML = "tu as gagné "
+                    document.getElementById("win").innerHTML = "tu as gagné ";
+                    document.getElementById("result").innerHTML = "resultat :";
+                    document.getElementById("rejouer").style.display = "inline-block"
                 }
 
             },1000)
