@@ -145,8 +145,11 @@ function correction() {
         result++;
     }
     else{
-        $("#soluce2").append("la bonne réponse a la question 10 est :" + " " + tablquest[9].correct + "<br>")
+        $("#soluce2").append("la bonne réponse a la question" +
+            " 10 est :" + " " + tablquest[9].correct + "<br>")
     }
+
+    $('#score').html(result);
 }
 
 
@@ -180,7 +183,7 @@ $(".repall").click(function () {
     if (tbl>=9){
         document.getElementById("global1").style.display = "none";
         document.getElementById("global2").style.display = "inline-block";
-        $('#score').html(result);
+
 correction()
 
     }
