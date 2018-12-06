@@ -1,0 +1,68 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+#question{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 15%;
+}
+
+#global1{
+    background: aqua;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 2%;
+
+}
+
+#reponse{
+    margin-top: 5%;
+    font-size: 2vw;
+}
+
+#soluce1{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+#bouton1{
+    position: absolute;
+    top: 85%;
+    left: 65%;
+}
+
+
+ .repall{
+     width: 24%;
+     margin-left: 32%;
+ }
+
+#global2 {
+    background: aqua;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding-bottom:5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 2vw;
+    display: none;
+    text-align: center;
+}
+
+#affichscore{
+    text-align: center;
+}
+
+#soluce2{
+    text-align: left;
+}
+
